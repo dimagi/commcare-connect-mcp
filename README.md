@@ -1,6 +1,7 @@
 # Experimental MCP Server for CommCare Connect (ccc)
 
 This is an experimental MCP server for CommCare Connect.
+You can find a [quick video walthrough here](https://www.loom.com/share/edad9538ccfe40deac53418e595484be).
 
 To use it with [claude code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview) you can run `claude` in this folder.
 You can see the `.mcp.json` for how it is set up.
