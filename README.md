@@ -10,3 +10,23 @@ You can see the `.mcp.json` for how it is set up.
 
 
 This project is built on top of the [Python MCP SDK](https://github.com/modelcontextprotocol/python-sdk).
+
+
+## Getting an authentication token
+
+The easiest way to get an authentication token is as a superuser to visit
+[https://connect.dimagi.com/admin/authtoken/tokenproxy/](https://connect.dimagi.com/admin/authtoken/tokenproxy/)
+and find a token associated with your email.
+
+If you don't have any tokens, you can run the following, replacing your username and password:
+
+```
+curl -X POST -d "username=you@dimagi.com&<password=***" https://connect.dimagi.com/auth-token/
+```
+
+This will create a token and print its value on the command line.
+
+You can test that the token is valid with the following:
+
+curl -H "Authorization: Token YOUR_TOKEN" "http://localhost:8000/admin_reports/api/dashboard_stats/?from_date=2024-01-01&to_date=2025-04-30"
+
