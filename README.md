@@ -11,6 +11,13 @@ absolute paths to the `uv` executable and `server.py` file.
 
 This project is built on top of the [Python MCP SDK](https://github.com/modelcontextprotocol/python-sdk).
 
+## Usage
+
+At the moment all this can do is query the global stats API which is used by the
+[program dashboard](https://connect.dimagi.com/admin_reports/program_dashboard).
+So basically you can ask it questions about amounts earned and paid, active users,
+and visit stats, optionally over specific date ranges (or programs/organizations if you know their IDs).
+
 
 ## Getting an authentication token
 
