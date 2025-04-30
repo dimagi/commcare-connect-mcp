@@ -18,7 +18,6 @@ At the moment all this can do is query the global stats API which is used by the
 So basically you can ask it questions about amounts earned and paid, active users,
 and visit stats, optionally over specific date ranges (or programs/organizations if you know their IDs).
 
-
 ## Getting an authentication token
 
 The easiest way to get an authentication token is as a superuser to visit
@@ -36,3 +35,11 @@ This will create a token and print its value on the command line.
 You can test that the token is valid with the following:
 
 curl -H "Authorization: Token YOUR_TOKEN" "https://connect.dimagi.com/admin_reports/api/dashboard_stats/?from_date=2024-01-01&to_date=2024-12-31"
+
+
+## Development
+
+You can change the `SERVER_ENDPOINT` in `.mcp.json` to http://localhost:8000 to test this against a development server.
+This will require running a development server and getting an API token through the same process as above against it.
+
+You can also run it against [https://connect-staging.dimagi.com/](https://connect-staging.dimagi.com/) with a similar process.
