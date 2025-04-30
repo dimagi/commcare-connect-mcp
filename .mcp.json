@@ -6,13 +6,15 @@
         "run",
         "--with",
         "mcp[cli]",
+        "--with",
+        "requests",
         "mcp",
         "run",
         "server.py"
       ],
       "env": {
-        "SERVER_ENDPOINT": "YOUR_SERVER_ENDPOINT_HERE",
-        "API_KEY": "YOUR_API_KEY_HERE"
+        "SERVER_ENDPOINT": "https://connect.dimagi.com",
+        "API_KEY": "<your-api-key-here>"
       }
     }
   }
