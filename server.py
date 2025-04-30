@@ -1,9 +1,29 @@
 # server.py
+import os
 from mcp.server.fastmcp import FastMCP
 
 # Create an MCP server
-mcp = FastMCP("Demo")
+mcp = FastMCP("CommCare Connect MCP")
 
+# Get server endpoint and API key from environment variables
+server_endpoint = os.getenv("SERVER_ENDPOINT")
+api_key = os.getenv("API_KEY")
+
+if not server_endpoint:
+    print("Warning: SERVER_ENDPOINT environment variable not set. Using default value.")
+    server_endpoint = "https://ccc.dimagi.com"
+if not api_key:
+    raise ValueError("API_KEY environment variable not set.")
+
+@mcp.tool()
+def get_ccc_server() -> str:
+    """Get the CommCare Connect server endpoint"""
+    return server_endpoint
+
+@mcp.tool()
+def get_api_key() -> str:
+    """Get the API key"""
+    return api_key
 
 # Add an addition tool
 @mcp.tool()

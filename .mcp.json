@@ -9,7 +9,11 @@
         "mcp",
         "run",
         "server.py"
-      ]
+      ],
+      "env": {
+        "SERVER_ENDPOINT": "YOUR_SERVER_ENDPOINT_HERE",
+        "API_KEY": "YOUR_API_KEY_HERE"
+      }
     }
   }
 }
